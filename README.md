@@ -17,9 +17,9 @@
 
 ---
 
-## Sneak Peek
+## Ini hasil aplikasinyaa
 
-*(Tambahkan screenshot aplikasi di sini)*
+![PokeLite Screenshot]([https://i.imgur.com/contohkode.png](https://imgur.com/a/2hF0AHU))
 
 ---
 
