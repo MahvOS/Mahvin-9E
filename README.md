@@ -2,7 +2,7 @@
 
 # PokéLite
 
-**Aplikasi Pokédex Modern dengan Clean Architecture**
+**Aplikasi Pokedex Modern ever made**
 
 </div>
 
