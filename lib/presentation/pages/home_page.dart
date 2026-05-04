@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -93,26 +94,34 @@ class HomePage extends StatelessWidget {
           return Container(
             height: 70,
             padding: const EdgeInsets.symmetric(vertical: 8),
-            child: ListView.separated(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              scrollDirection: Axis.horizontal,
-              itemCount: types.length,
-              separatorBuilder: (_, __) => const SizedBox(width: 8),
-              itemBuilder: (context, index) {
-                final type = types[index];
-                final isSelected = provider.selectedType == type;
-                return FilterChip(
-                  label: Text(type),
-                  selected: isSelected,
-                  onSelected: (_) => provider.filterByType(type),
-                  selectedColor: Colors.red.shade100,
-                  checkmarkColor: Colors.red,
-                  labelStyle: TextStyle(
-                    color: isSelected ? Colors.red : Colors.black87,
-                    fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                  ),
-                );
-              },
+            child: ScrollConfiguration(
+              behavior: ScrollConfiguration.of(context).copyWith(
+                dragDevices: {
+                  PointerDeviceKind.touch,
+                  PointerDeviceKind.mouse,
+                },
+              ),
+              child: ListView.separated(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                scrollDirection: Axis.horizontal,
+                itemCount: types.length,
+                separatorBuilder: (_, __) => const SizedBox(width: 8),
+                itemBuilder: (context, index) {
+                  final type = types[index];
+                  final isSelected = provider.selectedType == type;
+                  return FilterChip(
+                    label: Text(type),
+                    selected: isSelected,
+                    onSelected: (_) => provider.filterByType(type),
+                    selectedColor: Colors.red.shade100,
+                    checkmarkColor: Colors.red,
+                    labelStyle: TextStyle(
+                      color: isSelected ? Colors.red : Colors.black87,
+                      fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                    ),
+                  );
+                },
+              ),
             ),
           );
         },
@@ -135,11 +144,21 @@ class HomePage extends StatelessWidget {
           );
         }
 
+        int crossAxisCount = 2;
+        double screenWidth = MediaQuery.of(context).size.width;
+        if (screenWidth > 1200) {
+          crossAxisCount = 5;
+        } else if (screenWidth > 900) {
+          crossAxisCount = 4;
+        } else if (screenWidth > 600) {
+          crossAxisCount = 3;
+        }
+
         return SliverPadding(
           padding: const EdgeInsets.all(16),
           sliver: SliverGrid(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: crossAxisCount,
               childAspectRatio: 0.9,
               crossAxisSpacing: 12,
               mainAxisSpacing: 12,

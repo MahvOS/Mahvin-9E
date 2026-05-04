@@ -21,12 +21,17 @@ class DetailPage extends StatelessWidget {
           onPressed: () => Navigator.pop(context),
         ),
       ),
-      body: Column(
-        children: [
-          _buildHeader(),
-          const SizedBox(height: 20),
-          Expanded(child: _buildContentCard()),
-        ],
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 800),
+          child: Column(
+            children: [
+              _buildHeader(),
+              const SizedBox(height: 20),
+              Expanded(child: _buildContentCard()),
+            ],
+          ),
+        ),
       ),
     );
   }
