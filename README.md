@@ -1,8 +1,7 @@
 <div align="center">
 
 # PokéLite
-
-**Aplikasi Pokedex Modern Ever Made**
+**Aplikasi Pokedex Modern Ever Made.**
 
 </div>
 
