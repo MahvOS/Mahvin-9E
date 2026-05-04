@@ -16,7 +16,7 @@
 
 ---
 
-## Ini hasil aplikasinyaa
+## Hasil Aplikasinya
 
 ![PokeLite Screenshot](https://i.imgur.com/UF83N3S.png)
 
