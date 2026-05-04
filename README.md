@@ -1,16 +1,77 @@
-# pokelite
 
-A new Flutter project.
+<div align="center">
 
-## Getting Started
+# PokéLite
+**Aplikasi Pokedex Modern Ever Made.**
 
-This project is a starting point for a Flutter application.
+</div>
 
-A few resources to get you started if this is your first Flutter project:
+Live Demo: https://mahvos.github.io/Mahvin-9E.github.io/
+## Fitur Unggulan
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Pencarian Real-time:** Cari Pokémon favoritmu dalam hitungan milidetik.
+- **Filter Dinamis:** Saring Pokémon berdasarkan tipe elemennya (Fire, Water, Grass, dll).
+- **Desain Adaptif:** Tema warna aplikasi otomatis menyesuaikan dengan elemen utama Pokémon.
+- **Statistik Interaktif:** Progress bar keren untuk melihat kekuatan (HP, Attack, Defense, dll).
+- **Sistem Sinergi:** Dapatkan rekomendasi partner terbaik untuk membangun tim impianmu!
+- **Clean Architecture:** Kode yang terstruktur, mudah dikembangkan, dan mudah dipelihara.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Hasil Aplikasinya
+
+![PokeLite Screenshot](https://i.imgur.com/UF83N3S.png)
+
+---
+
+## Struktur Proyek (Clean Architecture)
+
+Aplikasi ini dibangun menggunakan prinsip **Clean Architecture** yang memisahkan logika ke dalam beberapa lapisan:
+
+```text
+lib/
+├── core/             # Konstanta, Tema, dan Utilitas (Warna Tipe Pokémon)
+├── data/             # Sumber Data (Local), Model, dan Implementasi Repository
+├── domain/           # Entitas Bisnis, Use Case, dan Interface Repository
+├── presentation/     # UI/UX (Pages, Widgets) dan State Management (Provider)
+└── main.dart         # Entry Point Aplikasi
+```
+
+---
+
+## Tech Stack
+
+- **Framework:** Flutter
+- **State Management:** Provider
+- **Font:** Google Fonts (Outfit)
+- **Arsitektur:** Clean Architecture Pattern
+
+---
+
+## Cara Jalaninnya
+
+**1. Clone atau buka repositori ini**
+```bash
+cd pokelite
+```
+
+**2. Unduh semua dependencies**
+```bash
+flutter pub get
+```
+
+**3. Siapkan Assets (Penting!)**
+Aplikasi ini menggunakan gambar lokal. Pastikan gambar Pokémon (`bulbasaur.png`, `pikachu.png`, dll.) sudah tersedia di direktori:
+`lib/data/images/`
+
+**4. Jalankan Aplikasi**
+Sambungkan emulator atau device asli, lalu tekan tombol run atau ketik:
+```bash
+flutter run
+```
+
+---
+
+Buka aplikasi dan cek tab **Sinergi** untuk melihat kombinasi mematikan lainnya!
+
+---
