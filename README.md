@@ -2,7 +2,7 @@
 
 # PokéLite
 
-**Aplikasi Pokedex Modern ever made**
+**Aplikasi Pokedex Modern Ever Made**
 
 </div>
 
