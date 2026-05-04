@@ -19,7 +19,7 @@
 
 ## Ini hasil aplikasinyaa
 
-![PokeLite Screenshot](https://imgur.com/UF83N3S)
+![PokeLite Screenshot]([https://imgur.com/UF83N3S](https://imgur.com/a/2hF0AHU))
 
 ---
 
