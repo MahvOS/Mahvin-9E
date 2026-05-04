@@ -49,8 +49,6 @@ lib/
 
 ## Cara Jalaninnya
 
-Ingin mencoba aplikasi ini di komputermu? Ikuti langkah-langkah mudah berikut:
-
 **1. Clone atau buka repositori ini**
 ```bash
 cd pokelite
